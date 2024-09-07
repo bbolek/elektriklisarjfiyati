@@ -51,12 +51,13 @@ tbody tr:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
 }
 
 img {
     width: 40px;
     height: auto;
-    margin-right: 10px;
 }
 
 span {
@@ -78,6 +79,7 @@ span {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        display: flex;
     }
 
     span {
@@ -90,4 +92,82 @@ tbody > tr.logo-row:nth-child(odd) {
 
 tbody > tr.logo-row:nth-child(even) {
     background-color: #ffffff; /* White for even main rows */
+}
+a {
+    text-decoration: none;
+    color: #009879;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #009879;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #009879;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.div-switch{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    place-content: center;
+    margin-inside: 5px;
+}
+
+.ac-dc {
+    margin-inline: 5px;
+    color:#000000;
+    font-size: 32px;
 }
