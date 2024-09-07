@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "sarj_user";
-$password = "F@ckuB1tchSa";
-$dbname = "sarj";
+$username = "u194282610_sarj_istasyon";
+$password = "YG~%g.k.@4E~2FH";
+$dbname = "u194282610_sarj_comp";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 
-$sql_company = "SELECT * FROM company";
+$sql_company = "SELECT * FROM company order by name asc";
 $result_company = $conn->query($sql_company);
 
 $sql_price_dc = "SELECT * FROM price WHERE Type='DC'";
@@ -115,9 +115,22 @@ $prices_ac[$row['company_short_name']][] = $row;
         // Filter table rows by company name
         $('#company-filter').on('keyup', function() {
             var filter = $(this).val().toUpperCase();
+            var showRow = false;
+
             $('#priceTable tr').each(function() {
                 var companyName = $(this).find('td:eq(0) span').text().toUpperCase();
-                if (companyName.indexOf(filter) > -1) {
+
+                // If the current row contains a company name
+                if (companyName) {
+                    if (companyName.indexOf(filter) > -1) {
+                        showRow = true; // Show this row and related rows
+                    } else {
+                        showRow = false; // Hide this row and related rows
+                    }
+                }
+
+                // Show or hide the row based on the filter match
+                if (showRow) {
                     $(this).show();
                 } else {
                     $(this).hide();
@@ -142,6 +155,7 @@ $prices_ac[$row['company_short_name']][] = $row;
         });
     });
 </script>
+
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "sarj_user";
-$password = "F@ckuB1tchSa";
-$dbname = "sarj";
+$username = "u194282610_sarj_istasyon";
+$password = "YG~%g.k.@4E~2FH";
+$dbname = "u194282610_sarj_comp";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -12,7 +12,7 @@ die("Connection failed: " . $conn->connect_error);
 
 $type = $_POST['type'];
 
-$sql_company = "SELECT * FROM company";
+$sql_company = "SELECT * FROM company order by name asc";
 $result_company = $conn->query($sql_company);
 
 $sql_price = "SELECT * FROM price WHERE Type='$type'";
