@@ -34,6 +34,16 @@ $prices_ac[$row['company_short_name']][] = $row;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkiye'deki farklı elektrikli araç şarj istasyonlarının fiyatlarını karşılaştırın. En uygun şarj fiyatlarını bulun ve bütçenizi koruyun.">
+    <meta name="keywords" content="şarj istasyonu fiyat karşılaştırma, elektrikli araç, şarj fiyatları, ucuz şarj noktaları, elektrikli araç şarj istasyonu, Trugo, astor, aksa, beeful, eşarj, epower, enyakıt, ecobox, gio, Lumicle, miggo, Oncharge, Öniz, onlife, Otojet, ovolt, Şarjon, sharz, shell, solarşarj, tunçmatik, voltrun, wat, zes">
+    <meta name="author" content="Şarj Fiyat">
+    <meta property="og:title" content="Elektrikli Araç Şarj İstasyonu Fiyat Karşılaştırması | ŞarjFiyat">
+    <meta property="og:description" content="Farklı şarj istasyonlarının fiyatlarını karşılaştırın ve en uygun şarj noktasını bulun. Güncel şarj fiyatlarıyla elektrikli araç sahiplerine rehberlik edin.">
+    <meta property="og:url" content="https://www.sarjfiyat.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elektrikli Araç Şarj İstasyonu Fiyat Karşılaştırması | ŞarjFiyat">
+    <meta name="twitter:description" content="Farklı şarj istasyonlarının fiyatlarını karşılaştırın ve en uygun şarj noktasını bulun. Güncel şarj fiyatlarıyla elektrikli araç sahiplerine rehberlik edin.">
     <title>Elektrikli araç şarj fiyatları</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -49,9 +59,9 @@ $prices_ac[$row['company_short_name']][] = $row;
         </label>
         <div class='ac-dc'>DC</div>
     </div>
-<div class="filter-container">
-    <input type="text" aria-placeholder='Firma...' id="company-filter" placeholder="Firma...">
-</div>
+    <div class="filter-container">
+        <input type="text" aria-placeholder='Firma...' id="company-filter" placeholder="Firma...">
+    </div>
 
 
 </div>
